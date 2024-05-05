@@ -9,3 +9,11 @@
 # git requirement 
 - online repository
 -  
+
+# git command
+- git init
+- git remote and origin 
+- git status
+- git add .
+- git commit
+- git push
