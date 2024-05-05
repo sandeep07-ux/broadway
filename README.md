@@ -15,5 +15,5 @@
 - git remote and origin 
 - git status
 - git add .
-- git commit
+- git commit -m "first commit"
 - git push
