@@ -30,14 +30,14 @@ const func3 = () => {
   })
 }
 
-const all = Promise.all([func1(), func2(), func3()])
-all
-  .then((res) => {
-    console.log(res)
-  })
-  .catch((rej) => {
-    console.log(rej)
-  })
+// const all = Promise.all([func1(), func2(), func3()])
+// all
+//   .then((res) => {
+//     console.log(res)
+//   })
+//   .catch((rej) => {
+//     console.log(rej)
+//   })
 // const all = Promise.allSettled([func1(), func2(), func3()])
 // all
 //   .then((res) => {
@@ -87,3 +87,37 @@ all
 //   .catch((rej) => {
 //     console.log(rej)
 //   })
+
+
+// const alwaysResolve = () => {
+//   return new Promise((res,rej) => {
+//     res();
+//   })
+
+//   // return Promise.resolve("")
+// }
+
+const resolveData = async () => {
+  // // resolve
+  // return "Resolve Data"
+
+  // // reject 
+  // throw "Reject"
+  let x = true;
+  if (x) {
+    return "I am accepted"  
+  } else {
+    return "I am rejected"
+  }
+}
+
+async function handleAsync() {
+  try {
+    const result = await resolveData()
+    console.log(result)
+  } catch (exception) {
+    console.log(exception)
+  }
+}
+
+handleAsync()
